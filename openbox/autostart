@@ -48,6 +48,8 @@ $(for output in $(xrandr --prop | grep -E -o -i "^[A-Z\-]+-[0-9]+"); do xrandr -
 ## Focus desktop
 $(sleep 0.5 && xdotool click 1) &
 
+## tap to click for touchpad of mine
+
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
 #exec kitty irssi &
