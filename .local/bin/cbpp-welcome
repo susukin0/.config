@@ -36,7 +36,7 @@ sleep 5s
 connectiontest
 clear
 
-doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/cbpp-include.cfg &&
+doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/susukin0/.config/artix/cbpp-include.cfg &&
     if ! . cbpp-include.cfg 2>/dev/null; then
         echo '  Failed to locate cbpp-include.cfg in PATH' >&2
         exit 1
@@ -44,7 +44,7 @@ doas wget -qO /usr/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinD
 trap 'postinstall' SIGINT && postinstall
 
 cd /tmp
-wget -qO config.zip https://github.com/YurinDoctrine/.config/archive/refs/heads/artix.zip && unzip config.zip && mv .config-artix .config
+wget -qO config.zip https://github.com/susukin0/.config/archive/refs/heads/artix.zip && unzip config.zip && mv .config-artix .config
 doas cp -rfd /etc/skel/.config/openbox/autostart .config/openbox/autostart
 doas rm -rfd /etc/skel/.*
 doas mkdir /etc/skel/.config
@@ -140,7 +140,7 @@ echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
 options rotate timeout:1 attempts:3 edns0 trust-ad use-vc single-request-reopen no-tld-query bogus-priv stop-dns-rebind domain-needed" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
 
-wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
+wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/susukin0/.config/artix/.local/bin/cbpp-include.cfg
 
 firefox-esr --preferences &
 sleep 5s && pkill firefox-esr
