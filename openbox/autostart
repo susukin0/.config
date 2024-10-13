@@ -10,6 +10,8 @@
 (sleep 5s && exec cbpp-welcome --first-run) &
 ## Have Fun & Happy CrunchBangin'! :)
 
+## rfkill unblock wifi bluetooth &
+
 $(sleep 1s && doas renice -n 19 -p $(pidof Xorg)) &
 
 $(sleep 1s && doas renice -n 19 -p $(pidof openbox)) &
@@ -66,7 +68,7 @@ $(sleep 0.5 && xdotool click 1) &
 
 ## Optional (Uncomment programs you might want to run)
 ## IRC Chat
-$(sleep 10s && exec tmux new -s irc -d torsocks irssi) &
+$(sleep 13s && exec tmux new -s irc -d torsocks irssi) &
 ## RSS Reader
 #exec xterm -e newsboat -r &
 
