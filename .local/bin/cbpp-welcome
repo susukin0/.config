@@ -200,7 +200,7 @@ echo -e "nameserver 9.9.9.11
 nameserver 149.112.112.11
 options timeout:1 attempts:3 trust-ad single-request bogus-priv stop-dns-rebind domain-needed" | doas tee /etc/resolv.conf && doas chattr +i /etc/resolv.conf
 
-wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/YurinDoctrine/.config/artix/.local/bin/cbpp-include.cfg
+wget -qO /home/$USER/.local/bin/cbpp-include.cfg https://raw.githubusercontent.com/susukin0/.config/artix/.local/bin/cbpp-include.cfg
 
 firefox-esr -headless &
 sleep 5s && pkill firefox-esr
