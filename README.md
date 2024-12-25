@@ -1,5 +1,5 @@
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/YurinDoctrine/.config/main/.local/bin/cbpp-welcome)
+bash <(curl -s https://raw.githubusercontent.com/susukin0/.config/main/.local/bin/cbpp-welcome)
 ```
 
 ## See wiki
